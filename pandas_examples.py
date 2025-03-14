@@ -35,7 +35,7 @@ print(df.query('GDP > 1.4 & LifeExp < 1.0'))
 print(df[df['Freedom'] > 0.6][['Country', 'Freedom']])
 
 
-# Mutluluk skoru en yüksek 5 ülkeyi nasıl sıralayabilirsiniz?
+# Mutluluk skoru en yüksek 5 ülkeyi sıralama
 max_score = df['Score'].sort_values(ascending=False).head(5)
 print(max_score)
 
@@ -64,7 +64,7 @@ print(low_freedom.groupby('Country')['Generosity'].mean())
 # endregion
 
  
-# region Superstore    turkcell deki verilerle birleştir
+# region Superstore   
 
 df = pd.read_csv(filepath_or_buffer='data/superstore_sales.csv')
 df.columns = df.columns.str.replace(' ', '_')
